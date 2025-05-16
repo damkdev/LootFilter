@@ -5,6 +5,7 @@ name: header
 meta { name = "Joe's Filter for Persnickety Players"; }
 
 
+
 /*@ define:module:global_defaults
 ---
 name: Global defaults
@@ -392,6 +393,7 @@ apply (name:VAR_GLOBAL_SHOW) {
 }
 
 
+
 /*@ define:module:item_tiers
 ---
 name: Item tiers
@@ -435,7 +437,7 @@ label: Tier 1 custom style
 group: Tier 1
 exampleItem: Helm of neitiznot
 */
-#define VAR_VALUES_TIER_1_CUSTOMSTYLE textColor = "#ff0080ff";borderColor = "#00000000";textAccentColor = "#FF000000";menuTextColor = "#FFFF9600";textAccent = 3;fontType = 1;showValue = true;showDespawn = false;
+#define VAR_VALUES_TIER_1_CUSTOMSTYLE textColor = "#ffffffff";backgroundColor = "#ff0040ff";borderColor = "#00ffffff";textAccentColor = "#FF000000";menuTextColor = "#FFFF9600";textAccent = 3;fontType = 1;showValue = true;showDespawn = false;
 
 /*@ define:input:item_tiers
 type: style
@@ -571,6 +573,7 @@ apply (name:VAR_VALUES_TIER_4_SHOW && VAR_VALUES_TIER_4_SHOW_ICONS) {
 }
 
 
+
 /*@ define:module:uniques
 ---
 name: Uniques
@@ -606,6 +609,7 @@ apply (name:VAR_UNIQUES_LIST) {
 apply (name:VAR_UNIQUES_LIST && VAR_UNIQUES_SHOW_ICONS) {
     icon = CurrentItem();
 }
+
 
 
 /*@ define:module:currency
@@ -1418,6 +1422,7 @@ apply (name:"Warrior guild token" && quantity:<VAR_WARRIOR_GUILD_TOKEN_MIN_QUANT
 
 
 
+
 /*@ define:module:clue_scrolls
 ---
 name: Clue Scrolls
@@ -1526,6 +1531,7 @@ apply (name:"Clue scroll (elite)") {
 apply (name:"Clue scroll (master)") {
     VAR_CLUE_SCROLLS_MASTER_CUSTOMSTYLE 
 }
+
 
 
 
@@ -1673,6 +1679,7 @@ apply (name:VAR_ENSOULED_HEADS_HIDE) {
 apply (name:CONST_ENSOULED_HEAD_LIST && value:<VAR_REMAINS_MINIMUM_VALUE) {
     hidden = true;
 }
+
 
 
 
@@ -2194,6 +2201,7 @@ apply (area:CONST_COX_AREA && name:"Water-filled gourd vial") {
 
 
 
+
 /*@ define:module:theatre_of_blood
 ---
 name: Theatre of Blood
@@ -2227,6 +2235,7 @@ apply (name:"Dawnbringer") {
 apply (name:"Salve amulet (e)") {
     VAR_TOB_SALVE_CUSTOMSTYLE 
 }
+
 
 
 /*@ define:module:tombs_of_amascut
@@ -2570,6 +2579,7 @@ apply (area:CONST_TOA_AREA && name:"Smelling salts (*") {
 apply (area:CONST_TOA_AREA && name:"Tears of Elidinis (*") {
     VAR_TEARS_OF_ELIDINIS_CUSTOMSTYLE
 }
+
 
 
 /*@ define:module:bossing
@@ -3323,6 +3333,7 @@ apply (area:CONST_NEX_AREA && name:VAR_BOSSING_NEX_SUPPLY_SHOW) {
 
 
 
+
 /*@ define:module:slayer
 ---
 name: Slayer
@@ -3695,6 +3706,7 @@ apply (area:CONST_SLAYER_SMOKE_DEVILS_AREA && name:VAR_SLAYER_SMOKE_DEVIL_HERBS_
 #define CONST_SLAYER_BLOODVELDS_AREA [0000, 0000, 0, 0000, 0000, 0]
 
 
+
 /*@ define:module:monsters
 ---
 name: Monsters
@@ -3874,6 +3886,7 @@ apply (name:"Scorching bow") {
 }
 
 
+
 /*@ define:module:alchs
 ---
 name: Alchs
@@ -3919,6 +3932,7 @@ apply (name:VAR_ALCHS_ITEM_LIST) {
 if (VAR_ALCHS_TERMINATE && name:VAR_ALCHS_ITEM_LIST) {
 
 }
+
 
 
 
@@ -4457,6 +4471,7 @@ group: Utilities
 apply ((name:CONST_AMMO_STANDARD_ARROWS_LIST || name:CONST_AMMO_BRUTAL_ARROWS_LIST || name:CONST_AMMO_SPECIAL_ARROWS_LIST || name:CONST_AMMO_DARTS_LIST || name:CONST_AMMO_JAVELINS_LIST || name:CONST_AMMO_BOLTS_LIST || name:CONST_AMMO_BOLTS_E_LIST || name:CONST_AMMO_DRAGON_BOLTS_E_LIST || name:CONST_AMMO_SPECIAL_BOLTS_LIST) && ownership:OWNERSHIP_SELF && quantity:==1 && VAR_AMMO_BACKPACK_REMINDER_SOUND) {
     sound = VAR_AMMO_BACKPACK_REMINDER_SOUND_ID;
 }
+
 
 /*@ define:module:runes
 ---
@@ -5061,6 +5076,7 @@ apply (name:"Lava rune" && quantity:>=VAR_LAVA_RUNE_MIN_QUANTITY && VAR_RUNES_SH
 }
 
 
+
 /*@ define:module:logs
 ---
 name: Logs
@@ -5430,6 +5446,7 @@ apply (name:"Blisterwood logs") {
 apply (name:"Blisterwood logs" && quantity:<VAR_BLISTERWOOD_LOGS_MIN_QUANTITY) {
     hidden = true;
 }
+
 
 
 
@@ -6176,6 +6193,7 @@ apply (name:"Raw karambwan") {
 
 
 
+
 /*@ define:module:ores
 ---
 name: Ores
@@ -6509,6 +6527,7 @@ apply (name:"lovakite ore") {
 }
 
 
+
 /*@ define:module:gems
 ---
 name: Gems
@@ -6767,6 +6786,7 @@ apply (name:["Uncut onyx",   "Onyx", ]) {
 apply (name:["Uncut onyx",   "Onyx", ] && quantity:<VAR_ONYX_MIN_QUANTITY) {
     hidden = true;
 }
+
 
 
 
@@ -7142,6 +7162,7 @@ apply (name:"'Perfect' gold bar") {
 apply (name:"'Perfect' gold bar" && quantity:<VAR_PERFECT_GOLD_BAR_MIN_QUANTITY) {
     hidden = true;
 }
+
 
 
 
@@ -7793,6 +7814,7 @@ apply (name:"*torstol" && noted:true && quantity:<VAR_HERBS_TORSTOL_NOTED_MIN_QU
 
 
 
+
 /*@ define:module:farming_seeds
 ---
 name: Farming seeds
@@ -8046,6 +8068,7 @@ apply (name:CONST_FARMING_SEEDS_ANIMA_LIST && value:<VAR_FARMING_SEEDS_MINIMUM_V
 
 
 
+
 /*@ define:module:herblore_secondaries
 ---
 name: Herblore secondaries
@@ -8139,6 +8162,7 @@ apply (name:VAR_SECONDARIES_HIDE) {
 apply (name:VAR_SECONDARIES_SHOW) {
     hidden = false;
 }
+
 
 
 /*@ define:module:potions
@@ -9082,6 +9106,7 @@ apply (name:"Extended super antifire(*") {
 
 
 
+
 /*@ define:module:food
 ---
 name: Food
@@ -9509,6 +9534,7 @@ apply (name:"Anglerfish") {
 apply (name:"Dark crab") {
     VAR_DARK_CRAB_CUSTOMSTYLE 
 }
+
 
 
 /*@ define:module:metal_equipment
@@ -10216,6 +10242,7 @@ apply (name:CONST_DRAGON_ARMOUR && name:VAR_METAL_EQUIPMENT_TIERS_HIDE) {
 
 
 
+
 /*@ define:module:gauntlet
 ---
 name: Gauntlet
@@ -10775,6 +10802,7 @@ apply (area:CONST_GAUNTLET_AREA && name:["* (perfected)", ]) {
 
 
 
+
 /*@ define:module:last_man_standing
 ---
 name: Last Man Standing
@@ -11022,6 +11050,7 @@ apply (area:CONST_LAST_MAN_STANDING_DESERT_ISLAND_AREA && name:VAR_LAST_MAN_STAN
 apply (area:CONST_LAST_MAN_STANDING_WILD_VARROCK_AREA && name:VAR_LAST_MAN_STANDING_MAGIC_ARMOUR_HIDE) {
     hidden = true;
 }
+
 
 
 /*@ define:module:rare_drop_table
@@ -11372,6 +11401,7 @@ apply (name:"Dragon spear" && quantity:==1 && name:VAR_RDT_SHOW) {
 apply (name:"Dragon spear" && quantity:==1 && name:VAR_RDT_HIDE) {
     hidden=true;
 }
+
 
 
 
